@@ -1,0 +1,19 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: MicroLMS_BE
+
+  springdoc:
+    api-docs:
+      enabled: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/elearning_platform
+    username: root
+    password: root123
+    driver-class-name: org.postgresql.Driver
+  jackson:
+    time-zone: Asia/Ho_Chi_Minh
+    date-format: yyyy-MM-dd HH:mm:ss
