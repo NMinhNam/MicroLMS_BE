@@ -20,6 +20,9 @@ public class Tenant {
     @Column(name = "display_name")
     private String displayName;
 
+    @Column(name = "domain_url")
+    private String domainUrl;
+
     @Column(name = "is_active")
     private Boolean isActive = true;
 
@@ -39,6 +42,9 @@ public class Tenant {
 
     public String getDisplayName() { return displayName; }
     public void setDisplayName(String displayName) { this.displayName = displayName; }
+
+    public String getDomainUrl() { return domainUrl; }
+    public void setDomainUrl(String domainUrl) { this.domainUrl = domainUrl; }
 
     public Boolean getIsActive() { return isActive; }
     public void setIsActive(Boolean isActive) { this.isActive = isActive; }

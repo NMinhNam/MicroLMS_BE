@@ -30,7 +30,8 @@ public class PostgresSchemaMultiTenantConnectionProvider implements MultiTenantC
     public Connection getConnection(String tenantIdentifier) throws SQLException {
         Connection connection = getAnyConnection();
         // Lệnh switch schema cho Postgres
-        connection.createStatement().execute("SET search_path TO " + tenantIdentifier);
+        System.out.println(">>> Switching connection to schema: " + tenantIdentifier);
+        connection.createStatement().execute("SET search_path TO \"" + tenantIdentifier + "\"");
         return connection;
     }
 
